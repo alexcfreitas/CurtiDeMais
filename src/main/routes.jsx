@@ -7,7 +7,7 @@ import About from '../about/about'
 export default props => (
   <Router history={hashHistory}>
     <Route path='/curtir' component={CurtiDeMais} />
-    <Route path='/about' component={About} />
+    <Route path='/about/:shot' component={About} />
     <Redirect from='*' to='/curtir' />
   </Router>
 )

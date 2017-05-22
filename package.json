@@ -8,10 +8,9 @@
     "production": "webpack --progress -p"
   },
   "keywords": [],
-  "author": "Alexsandr Carvalho de Freitas",
+  "author": "Alexsandr0 Carvalho de Freitas",
   "license": "ISC",
   "devDependencies": {
-    "admin-lte": "^2.3.11",
     "axios": "^0.15.3",
     "babel-core": "^6.22.1",
     "babel-loader": "^6.2.10",

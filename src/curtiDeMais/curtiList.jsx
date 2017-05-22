@@ -10,10 +10,10 @@ export default props => {
         <div  className="dribbble">
           <div   className="dribbble-shot">
             <div className="shot-img">
-              <img className="img-responsive" src={shot.images.hidpi} alt="Sem Imagem"/>
+              <img className="img-responsive" src={shot.images.hidpi ? shot.images.hidpi : shot.images.normal }  onClick={() => props.handleViewShot(shot)} alt="Sem Imagem"/>
             </div>
             <ul  className="tools group">
-              <li className="fav" onClick={() => props.handleLike(shot)}>
+              <li className="fav">
                 <i className='fa fa-heart' ></i><span>{shot.likes_count}</span>
               </li>
               <li className="cmnt">
