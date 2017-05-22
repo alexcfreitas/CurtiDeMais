@@ -1,0 +1,107 @@
+/*--------------------------------------------------
+	[IMPORTS]
+----------------------------------------------------*/
+/*--------------------------------------------------
+	[VARIAVEIS]
+----------------------------------------------------*/
+/*--------------------------------------------------
+	[TOPO]
+----------------------------------------------------*/
+nav .logo {
+  font-family: "Poppins", sans-serif;
+  font-weight: 100;
+  font-size: 20px;
+  color: white; }
+nav li {
+  margin-left: 25px; }
+  nav li a {
+    color: #bbb; }
+    nav li a a:active {
+      color: white; }
+
+.nav > li > a:focus,
+.nav > li > a:hover {
+  background-color: #24292e;
+  color: white; }
+
+.header {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  color: rgba(255, 255, 255, 0.75);
+  background-color: #24292e; }
+
+.tamanho {
+  float: right;
+  margin-bottom: 30px; }
+
+@media (max-width: 768px) {
+  .tamanho {
+    display: none; }
+
+  .btn {
+    margin-top: 20px;
+    text-align: center; } }
+/*--------------------------------------------------
+	[CONTEUDO]
+----------------------------------------------------*/
+body {
+  background-color: #efefef;
+  color: #24292e;
+  font-family: "Poppins", sans-serif;
+  font-weight: 100;
+  font-size: 20px; }
+
+.box-body {
+  margin: 15px 0 30px;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0 1px 2px rgba(43, 59, 93, 0.29);
+  -webkit-transition: all 0.15s linear;
+  -moz-transition: all 0.15s linear;
+  -ms-transition: all 0.15s linear;
+  -o-transition: all 0.15s linear;
+  transition: all 0.15s linear; }
+
+.dribbble {
+  position: relative;
+  background: #fff;
+  border-radius: 2px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07); }
+  .dribbble .dribbble-shot {
+    padding: 10px 10px 20px;
+    margin-bottom: 30px; }
+    .dribbble .dribbble-shot .tools {
+      margin: 10px 0 0;
+      text-align: left; }
+      .dribbble .dribbble-shot .tools li {
+        float: right;
+        font-weight: 400;
+        width: auto;
+        margin: 0 0 0 12px;
+        display: inline;
+        font-size: 11px;
+        line-height: 1;
+        color: #aaa;
+        cursor: pointer; }
+        .dribbble .dribbble-shot .tools li a {
+          text-decoration: none;
+          color: #aaa; }
+    .dribbble .dribbble-shot .group {
+      position: relative; }
+  .dribbble .shot-img {
+    max-width: 100%;
+    height: 0;
+    padding-bottom: 75%;
+    overflow: hidden; }
+
+.LikeTrue {
+  position: relative;
+  background: #ec4989;
+  border-radius: 2px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07);
+  color: #fff !important; }
+
+/*--------------------------------------------------
+	[RODAPE]
+----------------------------------------------------*/

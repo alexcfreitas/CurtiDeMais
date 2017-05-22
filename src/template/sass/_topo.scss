@@ -1,0 +1,52 @@
+/*--------------------------------------------------
+	[TOPO]
+----------------------------------------------------*/
+nav {
+	.logo {
+		font-family: $font-textos;
+		font-weight: 100;
+		font-size: 20px;
+		color: white;
+	}
+
+	li {
+		margin-left: 25px;
+		a {
+			color: $cinza;
+
+			a:active {
+				color: white;
+			}
+		}
+	}
+}
+
+.nav > li > a:focus,
+.nav > li > a:hover {
+	background-color: $corPrincipal;
+	color: white;
+}
+
+.header {
+	padding-top: 12px;
+	padding-bottom: 12px;
+	color: rgba(255,255,255,0.75);
+	background-color: $corPrincipal;
+}
+
+.tamanho{
+	float: right;
+	margin-bottom: 30px;
+}
+
+@media (max-width: 768px) {
+	.tamanho{
+		display: none;
+	}
+
+	.btn{
+		margin-top: 20px;
+		text-align: center;
+	}
+
+}
