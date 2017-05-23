@@ -71,22 +71,6 @@ body {
   .dribbble .dribbble-shot {
     padding: 10px 10px 20px;
     margin-bottom: 30px; }
-    .dribbble .dribbble-shot .tools {
-      margin: 10px 0 0;
-      text-align: left; }
-      .dribbble .dribbble-shot .tools li {
-        float: right;
-        font-weight: 400;
-        width: auto;
-        margin: 0 0 0 12px;
-        display: inline;
-        font-size: 11px;
-        line-height: 1;
-        color: #aaa;
-        cursor: pointer; }
-        .dribbble .dribbble-shot .tools li a {
-          text-decoration: none;
-          color: #aaa; }
     .dribbble .dribbble-shot .group {
       position: relative; }
   .dribbble .shot-img {
@@ -94,6 +78,26 @@ body {
     height: 0;
     padding-bottom: 75%;
     overflow: hidden; }
+
+.tools {
+  margin: 10px 0 0;
+  text-align: left; }
+  .tools li {
+    text-align: center;
+    font-weight: 400;
+    width: auto;
+    margin: 0 0 0 12px;
+    display: inline;
+    font-size: 25px;
+    line-height: 1;
+    color: #aaa;
+    cursor: pointer; }
+    .tools li a {
+      text-decoration: none;
+      color: #aaa;
+      margin-left: 20px; }
+    .tools li i {
+      margin-left: 15px; }
 
 .LikeTrue {
   position: relative;

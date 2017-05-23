@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import axios from 'axios'
 
-import PageHeader from '../template/pageHeader'
+
 import CurtiForm from './curtiForm'
 import CurtiList from './curtiList'
 import {BasicURL, AuthToken} from '../main/configAxios'
@@ -28,10 +28,7 @@ export default class CurtiDeMais extends Component {
 
     } else {
       axios.get(`${BasicURL}${search}?per_page=60`, AuthToken)
-        .then(resp => this.setState({
-          ...this.state,
-          username: '',
-          list: resp.data
+        .then(resp => this.setState({ ...this.state, username: '', list: resp.data
         }))
       console.log(`${BasicURL}${search}?per_page=60`);
     }
@@ -51,7 +48,7 @@ export default class CurtiDeMais extends Component {
   }
 
   handleViewShot(shot) {
-     window.location = `#/about/${shot.id}`
+     window.location = `#/shot/${shot.id}`
   }
 
   render() {
