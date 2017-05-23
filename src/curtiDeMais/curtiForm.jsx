@@ -5,7 +5,7 @@ export default props => (
   <div role='form' className='curtiForm'>
     <Grid cols='12 10 '>
       <input id='username' className='form-control'
-        placeholder='O que você quer procurar no Dribbble?'
+        placeholder='Informe o usuário do Dribbble.com que você mais curte'
         onChange={props.handleChange}
         value={props.username}></input>
     </Grid>

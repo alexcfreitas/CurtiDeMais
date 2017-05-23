@@ -55,9 +55,8 @@ export default class ShotController extends Component {
           </li>
         </ul>
         <div className='clearfix'></div>
-          <button id='alteraTamanho' className='btn btn-default'>
-            <i className='icon-grid'></i> Alterar Tamanho
-          </button>
+          <button className='btn btn-default btn-primary btn-shot-view' href='/#/lista-shots'>
+            <i className='icon-arrow-left'></i> Voltar</button>
       </Grid>
 
       </Grid>
