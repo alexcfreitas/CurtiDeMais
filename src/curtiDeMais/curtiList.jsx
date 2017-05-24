@@ -5,7 +5,6 @@ export default props => {
 
   const renderShots = () => {
     const list = props.list || []
-    console.log(props)
     return list.map(shot => (
       <Grid key={shot.id} cols={'12 6 4 '}>
         <div  className="dribbble">
