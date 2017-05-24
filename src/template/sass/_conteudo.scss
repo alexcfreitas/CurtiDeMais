@@ -1,5 +1,5 @@
 /*--------------------------------------------------
-	[CONTEUDO]
+
 ----------------------------------------------------*/
 body {
 	background-color: $corBody;
@@ -7,10 +7,11 @@ body {
 	font-family: $font-textos;
 	font-weight: 100;
 	font-size: 20px;
+	margin: auto;
 }
 
 .box-body {
-	margin: 15px 0 30px;
+	margin: 30px 0 10px;
 	padding: 30px;
 	background-color: #fff;
 	border-radius: 4px;
@@ -22,30 +23,71 @@ body {
 	transition: all 0.15s linear;
 }
 
+.alterarTamanho {
+	.dribbble {
+		position: relative;
+		background: #fff;
+		border-radius: 2px;
+		box-shadow: 0 1px 2px rgba(0,0,0,0.07);
+		width: 50%;
+
+		.tools {
+			li {
+				font-size: 12px;
+				float: right;
+
+				a {
+					margin-left: 5px;
+				}
+
+				i {
+					margin-left: 5px;
+				}
+			}
+		}
+
+		.dribbble-shot {
+			padding: 10px 10px 20px;
+			margin-bottom: 30px;
+
+			.group {
+				position: relative;
+			}
+		}
+
+		.shot-img {
+			max-width: 100%;
+			height: 0;
+			padding-bottom: 75%;
+			overflow: hidden;
+		}
+	}
+}
+
 .dribbble {
 	position: relative;
 	background: #fff;
 	border-radius: 2px;
 	box-shadow: 0 1px 2px rgba(0,0,0,0.07);
 
-.tools{
-	li {
-		font-size: 12px;
-		float: right;
-		a {
-			margin-left: 0px;
-		}
-		i{
-			margin-left: 0px;
+	.tools {
+		li {
+			font-size: 12px;
+			float: right;
+
+			a {
+				margin-left: 5px;
+			}
+
+			i {
+				margin-left: 5px;
+			}
 		}
 	}
-}
 
 	.dribbble-shot {
 		padding: 10px 10px 20px;
 		margin-bottom: 30px;
-
-
 
 		.group {
 			position: relative;
@@ -61,95 +103,102 @@ body {
 }
 
 .tools {
-	margin: 10px 0 0;
+	margin: 5px 0 0;
 	text-align: left;
 
 	li {
-
 		font-weight: 400;
 		width: auto;
-		margin: 0 0 0 12px;
 		display: inline;
-		font-size: 25px;
-		line-height: 1;
+		font-size: 20px;
+		line-height: -1;
 		color: #aaa;
 		cursor: pointer;
 
 		a {
 			text-decoration: none;
 			color: #aaa;
-			margin-left: 20px;
 		}
-		i{
-			margin-left: 15px;
+
+		i {
+			margin-left: 10px;
 		}
 	}
 }
 
-
-.LikeTrue{
-	position: relative;
-	background: #ec4989;
-	border-radius: 2px;
-	box-shadow: 0 1px 2px rgba(0,0,0,0.07);
-	color: #fff!important;
+.LikeTrue {
+	color: #ec4989!important;
 }
 
-
-.btn{
+.btn {
 	display: inline-block;
-padding: 8px 20px 10px;
-margin-bottom: 0;
-line-height: 20px;
-color: #646F82;
-text-align: center;
-vertical-align: middle;
-cursor: pointer;
-background-color: #F4F4F4;
--webkit-border-radius: 2px;
-background-image: none!important;
-border: 1px solid #D4D6DA;
-text-shadow: none;
-box-shadow: none;
--webkit-transition: all;
--moz-transition: all;
--o-transition: all;
-transition: all;
-font: 14px/20px "Open sans", Arial, sans-serif;
-
+	padding: 8px 20px 10px;
+	margin-bottom: 0;
+	line-height: 20px;
+	color: #646F82;
+	text-align: center;
+	vertical-align: middle;
+	cursor: pointer;
+	background-color: #F4F4F4;
+	-webkit-border-radius: 2px;
+	background-image: none!important;
+	border: 1px solid #D4D6DA;
+	text-shadow: none;
+	box-shadow: none;
+	-webkit-transition: all;
+	-moz-transition: all;
+	-o-transition: all;
+	transition: all;
+	font: 14px/20px "Open sans", Arial, sans-serif;
+	float: right;
 }
 
-
-.form-control{
-    display: block;
-    width: 100%;
-    height: 44px;
-    padding: 6px 12px;
-    font-size: 14px;
-    font-family: Arial, "Open sans", Helvetica, Arial, sans-serif;
-    line-height: 1.428571429;
-    color: #666;
-    background-color: #fff;
-    background-image: none;
-    border: 1px solid silver;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border-radius: 5px;
-    -webkit-box-shadow: none!important;
-    -moz-box-shadow: none!important;
-    box-shadow: none!important;
-    -webkit-transition: border-color linear .2s, box-shadow ease-in-out .2s;
-    -webkit-transition: border-color linear .2s;
-    -moz-transition: border-color linear .2s;
-    -o-transition: border-color linear .2s;
-    transition: border-color linear .2s;
+.form-control {
+	display: block;
+	width: 100%;
+	height: 44px;
+	padding: 6px 12px;
+	font-size: 14px;
+	font-family: Arial, "Open sans", Helvetica, Arial, sans-serif;
+	line-height: 1.428571429;
+	color: #666;
+	background-color: #fff;
+	background-image: none;
+	border: 1px solid silver;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	-webkit-box-shadow: none!important;
+	-moz-box-shadow: none!important;
+	box-shadow: none!important;
+	-webkit-transition: border-color linear 0.2s, box-shadow ease-in-out 0.2s;
+	-webkit-transition: border-color linear 0.2s;
+	-moz-transition: border-color linear 0.2s;
+	-o-transition: border-color linear 0.2s;
+	transition: border-color linear 0.2s;
 }
 
-
-.btn-shot-view{
+.btn-shot-view {
 	float: right;
 	font-weight: 300;
-	i{
+	margin-top: -5px;
+
+	i {
 		margin-right: 5px;
 	}
+}
+
+.tamanho {
+	margin-top: 10px;
+	margin-bottom: 20px;
+}
+
+.titulo {
+	text-align: center;
+	font-weight: 200;
+	color: #646F82;
+}
+
+.alignBody {
+	margin-top: 30px;
 }

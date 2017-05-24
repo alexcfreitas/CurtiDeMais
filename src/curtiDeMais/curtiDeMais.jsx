@@ -5,12 +5,14 @@ import axios from 'axios'
 import CurtiForm from './curtiForm'
 import CurtiList from './curtiList'
 import {BasicURL, AuthToken} from '../main/configAxios'
+import Grid from '../template/grid'
 
 export default class CurtiDeMais extends Component {
   constructor(props) {
     super(props)
     this.state = {
       username: '',
+      tamanho: false,
       list: []
     }
     this.handleChange = this.handleChange.bind(this)
@@ -30,7 +32,6 @@ export default class CurtiDeMais extends Component {
       axios.get(`${BasicURL}${search}?per_page=60`, AuthToken)
         .then(resp => this.setState({ ...this.state, username: '', list: resp.data
         }))
-      console.log(`${BasicURL}${search}?per_page=60`);
     }
 
   }
@@ -44,7 +45,9 @@ export default class CurtiDeMais extends Component {
   }
 
   handleSize() {
-    this.setState({...this.state})
+    this.setState(prevState => ({
+      mudarTamanho: !prevState.mudarTamanho
+    }));
   }
 
   handleViewShot(shot) {
@@ -60,10 +63,15 @@ export default class CurtiDeMais extends Component {
             handleChange={this.handleChange}
             handleSearch={this.handleSearch}/>
         </div>
+
+          <button id='alteraTamanho' className='btn btn-primary tamanho' onClick={this.handleSize}>
+            <i className='icon-grid'></i> Alterar Tamanho
+          </button>
+        <div className={ this.state.mudarTamanho ? 'alterarTamanho' : ''}>
         <CurtiList
           list={this.state.list}
-          handleViewShot={this.handleViewShot}
-          handleSize={this.handleSize}/>
+          handleViewShot={this.handleViewShot}/>
+      </div>
       </div>
     )
   }

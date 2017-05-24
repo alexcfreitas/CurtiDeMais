@@ -5,8 +5,9 @@ export default props => {
 
   const renderShots = () => {
     const list = props.list || []
+    console.log(props)
     return list.map(shot => (
-      <Grid key={shot.id} cols='12 6 4 3'>
+      <Grid key={shot.id} cols={'12 6 4 '}>
         <div  className="dribbble">
           <div   className="dribbble-shot">
             <div className="shot-img">
@@ -32,11 +33,6 @@ export default props => {
   return (
 
       <Grid cols='12'>
-        <div className='row tamanho'>
-          <button id='alteraTamanho' className='btn btn-primary'>
-            <i className='icon-grid'></i> Alterar Tamanho
-          </button>
-        </div>
         <div className="clearfix"></div>
         <div className='row'>
         {renderShots()}

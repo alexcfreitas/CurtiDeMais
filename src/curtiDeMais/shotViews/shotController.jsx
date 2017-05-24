@@ -13,6 +13,7 @@ export default class ShotController extends Component {
     }
 
     this.refreshShot()
+     this.handleLike = this.handleLike.bind(this);
   }
 
   refreshShot(){
@@ -24,15 +25,27 @@ export default class ShotController extends Component {
       .then(resp => this.setState({...this.state, shot: resp.data, images: resp.data.images}))
   }
 
+  handleLike(){
+    this.setState(prevState => ({
+      isLike: !prevState.isLike
+    }));
+    const shot = document.URL
+    const shotArray = shot.split('/')
+    const shotID = shotArray[shotArray.length-1]
+    axios.get(`${BasicURL}/shots/${shotID}/like`, AuthToken)
+      .then(resp => this.setState({...this.state}))
+  }
+
 
   render() {
 
     return (
       <Grid key={this.state.shot.id} cols='12'>
-        <div className="titulo text-center">
-          <h3>{this.state.shot.title}</h3>
-        </div>
+        <div className="alignBody col-md-offset-2">
         <Grid cols='12 8'>
+          <div className="titulo">
+            <h3>{this.state.shot.title}</h3>
+          </div>
           <div  className="dribbble align-center">
           <div   className="dribbble-shot">
             <div className="shot-img">
@@ -42,10 +55,12 @@ export default class ShotController extends Component {
           </div>
         </div>
       </Grid>
-      <Grid cols='12 4'>
+      <div className="clearfix"></div>
+      <Grid cols='12 8'>
         <ul  className="tools group">
-          <li className="fav">
-            <i className='fa fa-heart' ></i><span>{this.state.shot.likes_count}</span>
+          <li className="fav" onClick={this.handleLike}>
+            {this.state.isLike ? <span><i className='fa fa-heart LikeTrue' ></i><span className='LikeTrue'> Like</span></span>: <span><i className='fa fa-heart ' ></i><span>{this.state.shot.likes_count}</span></span>}
+
           </li>
           <li className="cmnt">
             <i className='fa fa-comments'></i><span> {this.state.shot.comments_count}</span>
@@ -53,12 +68,13 @@ export default class ShotController extends Component {
           <li className="views">
             <i className='fa fa-eye'></i><span>{this.state.shot.views_count}</span>
           </li>
+          <li className="">
+            <a className='btn btn-default btn-primary btn-shot-view' href="/#/list-shots">
+              <i className='icon-arrow-left'></i> Voltar</a>
+          </li>
         </ul>
-        <div className='clearfix'></div>
-          <button className='btn btn-default btn-primary btn-shot-view' href='/#/lista-shots'>
-            <i className='icon-arrow-left'></i> Voltar</button>
       </Grid>
-
+    </div>
       </Grid>
     )
   }
